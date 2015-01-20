@@ -1,0 +1,17 @@
+
+<!-- Modal Image preview -->
+<div class="modal fade" id="imgPreviewModal" tabindex="-1" role="dialog"
+	aria-labelledby="basicModal" aria-hidden="true">
+	<div class="modal-dialog-preview-img">
+		<div class="modal-content">
+			<div class="modal-body">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-hidden="true">&times;</button>
+				<div data-bind="foreach: resourcePreview">
+					<img data-bind="attr:{src: src}" alt="...">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Modal Image preview -->

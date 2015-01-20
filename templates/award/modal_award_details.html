@@ -1,0 +1,39 @@
+<!-- Modal Award Details -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content ">
+                <div class="modal-body">
+                    <div class="row" data-bind="foreach: selectedAward">
+                        <div class="col-xs-4">
+                            <div data-bind="carousel: { content: { data: resources_src } }"></div>
+                        </div>
+                        <div class="col-xs-8">
+                            <h4 class="modal-title" id="myModalLabel"><label data-bind="text: title"></label></h4>
+                            <div class="row">
+                                <div class="col-xs-2">
+                                    <img class="img-responsive img-circle" data-bind="attr:{src: owner.avatar_src}" alt="">
+                                </div>
+                                <div class="col-xs-10">
+                                    <div class="row">
+                                        <h5>
+                                            Embajador:
+                                            <!--<a data-bind="popover: {template: 'popoverAwardList', placement: 'bottom', trigger: 'hover'}, event: { mouseover: previewBeeProfile }" style="cursor: pointer;">-->
+                                                <small data-bind="text: owner.name"></small>
+                                            <!--</a>-->
+                                        </h5>
+                                        <h5>Fecha de Donacion: <small>01/12/2014</small></h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="awd-descrption">
+                                <hr>
+                                <p data-bind="html: text"></p>
+                            </span>
+                            <h4><div class="awd-description-col amount-col"><span class="love-coin"></span><p data-bind="text: amount_love"></p></div></h4>
+                            <button id="btnPurchaseAward" type="button" data-bind="click: purchaseAward" class="btn-hb">Canjear Premio</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

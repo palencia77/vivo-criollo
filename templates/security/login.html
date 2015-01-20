@@ -1,0 +1,127 @@
+{% extends 'security/base.html' %}
+{% block form_top %}
+<div class="login-box">
+	<h4>Ingresa</h4>
+	<div class="wrap-login">
+		<div class="row">
+			<div class="col-xs-12"><h6>Con tus redes sociales</h6></div>
+			<div class="col-lg-4 col-md-4 col-sm-4">
+				<form id="facebook_login" action="/user/facebooklogin" method="POST">
+					{% csrf_token %}
+					<img class="img-responsive img-circle" src="{{STATIC_URL}}img/icon/icon_facebook-signup-color_32x32.png" title="facebook-Login" onmouseover="this.src='{{STATIC_URL}}img/icon/icon_facebook-signup-light_32x32.png'" onmouseout="this.src='{{STATIC_URL}}img/icon/icon_facebook-signup-color_32x32.png'" style="cursor: pointer" onclick="facebooklogin()">
+				</form>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-4">
+				<form id="googleplus_login" action="/user/googlepluslogin" method="POST">
+					{% csrf_token %}
+					<span id="signinButton">
+						<span class="g-signin" data-callback="signinCallback" data-clientid="1015117080749-jh2k18stk1ljl6o9tn3l1laq27qgut8f.apps.googleusercontent.com" data-cookiepolicy="http://www.heybees.com" data-requestvisibleactions="http://schemas.google.com/AddActivity" data-scope="https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/userinfo.email">
+							<img class="googleplus-signup top-buffer-xs img-responsive img-circle" src="{{STATIC_URL}}img/icon/icon_googleplus_signup_dark.png" title="Sign Up Using Google Plus" alt="Sign Up Using Google Plus" onMouseOver="this.src='{{STATIC_URL}}img/icon/icon_googleplus_signup_light.png'" onMouseOut="this.src='{{STATIC_URL}}img/icon/icon_googleplus_signup_dark.png'">
+						</span>
+					</span>
+				</form>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-4" style="display: none;" id="linkedin">
+			<!-- 				<img id="MyButton" style="cursor: pointer" onclick="onLinkedInLoad" -->
+			<!-- 					src="{{STATIC_URL}}img/icon/icon_linkedin_mobile_32x32.png">					 -->
+				<form id="login_linkedin" action="/user/linkedinlogin" method="POST">
+					{% csrf_token %}
+					<script type="IN/Login" data-size="medium" data-onAuth="onLinkedInLogin"></script>
+				</form>	
+			</div>
+		</div>
+
+		<div class="row">
+<div class="col-xs-12"><h6>Con tus redes sociales</h6></div>
+		</div>
+
+		<h5>Iniciar Sessión</h5>
+		<div class="row">
+			<form id="user_login" action="" method="POST">
+				<div class="row">
+					{% csrf_token %}
+					<div class="col-lg-12 col-md-12 col-sm-12">
+						<div class="col-lg-6">
+							<div class="form-group">
+								<input name="login" type="email" class="form-control" required="required" placeholder="Correo">
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="form-group">
+								<input name="password" type="password" class="form-control" required="required" placeholder="Contraseña">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12 col-md-12 col-sm-12">
+							{% if error_login %}
+							<span class="label label-danger">{{error_login}}</span>
+							{% endif %}
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12">
+						<div class="col-lg-6 col-md-6 col-sm-6">
+							<div class="row">	
+								<a class="psw-text" href="{% url 'recover_password' %}">¿Olvidaste tu contraseña?</a>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-6">
+							<div class="pull-right">	
+								<button type="submit" class="btn btn-hb">Ingresa</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+	{% endblock %}
+
+	{% block form_middle %}
+<div class="sigin-box">	
+	<h4>Registrate</h4>
+	<div class="wrap-login">
+		<div class="row">
+			<form id="user_register" action="user_register" method="POST">
+				{% csrf_token %}
+				<div class="col-lg-12 col-md-12 col-sm-12">
+					<div class="form-group">
+						<input name="full_name" type="text" class="form-control" required="required" placeholder="Nombre completo">
+					</div>
+					<div class="form-group">
+						<input name="login" type="email" class="form-control" required="required" placeholder="Correo">
+					</div>
+					<div class="form-group">
+						<input name="password" type="password" class="form-control" required="required" placeholder="Contraseña">
+					</div>
+					<div class="row">
+						<div class="col-lg-12 col-md-12 col-sm-12">
+							{% if error_register %}
+							<span class="label label-danger">{{error_register}}</span>
+							{% endif %}
+						</div>
+					</div>
+					<div class="pull-right">
+						<button name="submit" type="submit" class="btn btn-hb">Registrarme</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
+
+{% block js %}
+        <!-- Linkedin Login -->
+        <script src="{{STATIC_URL}}js/social-login/linkedin/linkedin-api.js"></script>
+        <!-- Google Plus Login -->
+        <script src="{{STATIC_URL}}js/social-login/google+/google-api.js"></script>
+
+        <!-- Facebook Login -->
+        <script src="{{STATIC_URL}}js/social-login/facebook/all.js"></script>
+        <script src="{{STATIC_URL}}js/social-login/facebook/facebook-api.js"></script>
+{% endblock %}

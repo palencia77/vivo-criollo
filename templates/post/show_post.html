@@ -1,0 +1,129 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load url from future %}
+{% block body %}
+<div class="container">
+	<!--Start Content-->
+	<div id="content" class="">	
+
+<div id="divPostViewModel"> 
+<div class="row1" data-bind="foreach: show_post">       
+  	<div class="item1">
+     	<div class="well1">
+			<div class="box-post">
+				<div class="row">
+					<div class="box-post-header">
+						<a data-bind="popover: {template: 'popoverShowPost', placement: 'top', trigger: 'hover'}" style="cursor: pointer;">
+                                        <img class="img-circle" data-bind="attr:{src: owner.avatar_src}" alt="A">
+                                        </a>
+                                        <a data-bind="attr: { href: owner.short_url}"><strong data-bind="text: owner.name"></strong></a>
+                                   
+                                    <script type="text/html" id="popoverShowPost">
+                                            <div class="test1" style="height: 200px; width: 400px;">
+                                                <div data-bind="foreach: selected_bee">
+                                                    <!-- AGREGADO POR JESUS: NO ELIMINAR POR FAVOR-->
+                                                    <!--<img class="img-responsive img-circle" data-bind="attr:{src: avatar_src}" alt="">-->
+                                                    <!--<label data-bind="text: name"></label>-->
+                                                    <!--<label data-bind="text: description"></label>-->
+                                                    <!--<img data-bind="attr:{src: cover_src}" alt="">-->
+                                                </div>
+                                            </div>
+                                        </script>
+                        <small class="time strong" data-bind="timeago: created_date"></small>
+                           <span class="edit-post" data-bind='fadeVisible: editable'>
+							<i type="button" data-bind="click:editPostSeeTextbox" title="Edit post" class="glyphicon glyphicon-pencil"> </i>
+							<i name="btnDeleteComment" data-bind="click:deletePost" title="Delete post" class="glyphicon glyphicon-remove"> </i>
+						</span>
+                       </div>
+                      </div>
+				<div class="row">
+					<div class="col-xs-12" data-bind="foreach: resources_src">
+						<a href="" data-toggle="modal" data-target="#imgPreviewModal" data-bind="click: previewPostResource"><img class="img-post" data-bind="attr:{src: src}" alt=""></a>
+					</div>
+
+					<div class="col-xs-12 text-post">
+						<a href="#"><h5 data-bind="text: title"></h5></a>     
+						<!--<p data-bind="html: text"></p> -->
+						<p data-bind="visible: !editing(), html: text"></p>
+						<textarea class="animated" data-bind="visible: editing, value: text, valueUpdate: 'afterkeydown', event: {keypress: editPost}"> </textarea>
+					</div>
+
+					<div class="col-xs-12 action-btn-section">
+						{% include "sharingPostModal.html" %}
+						<a data-bind="click:sharePost" data-toggle="modal" data-target="#shareModalPost"><span class="bee"></span>Fly</a>
+						<p class="text-center" data-bind="text: fly_counter"></p>
+						<a data-bind="click:postLoveAction"><span></span><span data-bind="css: love_action_class"></span>Love it</a>
+						<p data-bind="text: love_counter"></p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="btn-mostcomment">
+                  <a name="btnSeeMostComment" data-bind="visible: !comment_is_lastpage(), click: findCommentByPostShow" title="Ver más comentarios" class=""><i class="glyphicon glyphicon-comment"> </i> Ver más comentarios</a>
+			</div>
+
+			<div class="box-comments">
+                   <div data-bind="foreach: comments">
+                       <div class="bee-comment">
+                           <div class="bee-comment-row">
+                               <div class="bee-comment-col col-avatar">
+                                   <img data-bind="attr:{src: owner.avatar_src}" alt="Avatar">
+                               </div>
+                               <div class="bee-comment-col">
+                                    <a data-bind="attr: { href: owner.short_url}"><strong data-bind="text: owner.name"></strong></a>
+                                   <p data-bind="visible: !editing(), text: text"></p>
+                                   <input data-bind="visible: editing, value: text, valueUpdate: 'afterkeydown', event: {keypress: editComment}" />
+                                   <br>
+                                   <small class="time strong" data-bind="timeago: created_date"></small>
+                               </div>
+                               <div class="bee-comment-col col-action">
+                                   <span class="action-section-comment">
+                                       <a href="#" data-bind="click: commentLoveAction"><span data-bind="css: love_action_class"></span></a>
+                                       <p data-bind="text: love_counter"></p>
+                                   </span>
+                                   <span class="edit-post" data-bind='fadeVisible: editable'>
+                                       <i type="button" data-bind="click:editPostSeeTextbox" title="Edit post" class="glyphicon glyphicon-pencil"> </i>
+                                       <i name="btnDeleteComment" data-bind="click:deleteComment" title="Delete post" class="glyphicon glyphicon-remove"> </i>
+                                   </span>
+                                   <!-- <small class="time strong" data-bind="timeago: created_date"></small> -->
+                               </div>
+                           </div>
+                       </div>
+                     </div>
+                      								
+                   <div class="input-comment">
+					<input data-bind="value: new_comment, valueUpdate: 'afterkeydown', event: {keypress: createComment}" placeholder="comenta" type="text" name="title" />
+                    </div>
+			</div>
+		</div>
+	</div>
+</div>
+{% include "home/previewImage.html" %}
+</div>
+</div>
+</div>
+<div id="divPersonViewModel" class="row">
+</div>
+{% endblock %}
+
+{% block css %}
+<link href="{{STATIC_URL}}js/jquery/jquery-loadmask/jquery.loadmask.css" rel="stylesheet">
+<link href="{{STATIC_URL}}css/custom.css" rel="stylesheet">
+{% endblock %}
+
+{% block js %}
+<script src="{{STATIC_URL}}js/jquery/jquery-loadmask/jquery.loadmask.min.js"></script>
+<script src="{{STATIC_URL}}js/models/post.js"></script>
+<script src="{{STATIC_URL}}js/models/comment.js"></script>
+<script src="{{STATIC_URL}}js/models/resource.js"></script>
+<script src="{{STATIC_URL}}js/viewmodels/vmPost.js"></script>
+<script src="{{STATIC_URL}}js/general/jquery.autosize.js"></script>
+<script type="text/javascript">
+// Receives data from the post view: 
+	{% autoescape off %}
+	var post = {{ post }}
+	{% endautoescape %}
+	showPost(post);
+</script>
+
+{% endblock %}	
