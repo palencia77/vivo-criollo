@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load url from future %}
+{% block body %}
+
+<!--Start Content-->
+<div id="content" class="col-xs-10 col-xs-offset-1">
+    <div id="divPersonViewModel">
+        <div data-bind="foreach: selected_person">
+            <h3>Banco de Premios <small>Love Disponible <span class="love-coin"></span><label data-bind="text : love_coin"></label></small></h3>
+        </div>
+    </div>
+    <hr class="hexagono">
+    <div id="awardViewModel">
+        <div data-bind="foreach: awards">
+            <div class="col-xs-10 col-sm-6 col-md-3">
+                <div class="box-award">
+                    <a name="imgAvatar" data-toggle="modal" data-target="#myModal" data-bind="click: showAward">
+                        <img data-bind="attr:{src: avatar_src}" alt="">
+                    </a>
+
+                    <div class="awd-description">
+                        <div class="awd-description-row">
+                            <div class="awd-description-col"><label style="cursor: pointer" data-bind="text: title"></label></div>
+                            <div class="awd-description-col amount-col"><span class="love-coin"> </span><p data-bind="text: amount_love"></p></div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="donate-by">
+                        <div class="donate-by-row">
+                            <div class="donate-by-col">
+                                <p>Donado por:</p>
+                                <!--<a data-bind="popover: {template: 'popoverAwardList', placement: 'top', trigger: 'hover'}, event: { mouseover: previewBeeProfile }" style="cursor: pointer;">-->
+                                    <div class="avatar-donate">
+                                        <img data-bind="attr:{src: owner.avatar_src}" alt="avatar" />
+                                    </div>
+                                    <p data-bind="text: owner.name"></p>
+                                <!--</a>-->
+                                <script type="text/html" id="popoverAwardList">
+                                    <div class="test1" style="height: 200px; width: 400px;">
+                                        <div data-bind="foreach: selected_bee">
+                                            <img class="img-responsive img-circle" data-bind="attr:{src: avatar_src}" alt="">
+                                            <label data-bind="text: name"></label>
+                                            <label data-bind="text: description"></label>
+                                            <img data-bind="attr:{src: cover_src}" alt="">
+                                        </div>
+                                    </div>
+                                </script>
+                            </div>
+                            <div class="donate-by-col fly-col">
+                                {% include "sharingAwardModal.html" %}
+                                <a data-bind="click: shareAward" data-toggle="modal" data-target="#shareModalAward"><span class="bee"></span>Fly</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% include 'award/modal_award_details.html' %}
+    </div>
+</div>
+{% endblock %}
+
+{% block css %}
+<link href="{{STATIC_URL}}js/jquery/jquery-loadmask/jquery.loadmask.css" rel="stylesheet">
+{% endblock %}
+
+{% block js %}
+<!-- Jquery loading mask script-->
+
+<!-- Customs scripts -->
+<script src="{{STATIC_URL}}js/models/award.js"></script>
+<script src="{{STATIC_URL}}js/viewmodels/vmAward.js"></script>
+<script type="text/javascript">
+    // Call to function to search the awards:
+    findAwardsByStatus();
+</script>
+{% endblock %}

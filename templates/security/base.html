@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+{% load dajaxice_templatetags %}
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <!--[if IE]>
+                <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+                <[endif]-->
+        <title>Heybees</title> {% dajaxice_js_import %}
+        <!--  Jquery Core Script -->
+        <script src="{{STATIC_URL}}js/jquery/jquery-1.9.1.min.js"></script>
+        <!--  Core Bootstrap Script -->
+        <script src="{{STATIC_URL}}js/bootstrap/bootstrap.min.js"></script>
+        <!--  Bootstrap Style -->
+        <link href="{{STATIC_URL}}css/bootstrap.min.css" rel="stylesheet">
+        <!--  Font-Awesome Style -->
+        <link href="{{STATIC_URL}}font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+        <!-- Knockout 3.1.0 -->
+        <script src="{{STATIC_URL}}knockout-3.1.0/knockout-3.1.0.js"></script>
+        <script src="{{STATIC_URL}}knockout-3.1.0/custom-bindings.js"></script>
+
+        <!-- Vm -->
+        <script src="{{STATIC_URL}}js/tools/image_tools.js"></script>
+        <script src="{{STATIC_URL}}js/models/cause.js"></script>
+        <script src="{{STATIC_URL}}js/viewmodels/vmLogin.js"></script>
+        <script src="{{STATIC_URL}}js/viewmodels/vmSecurity.js"></script>
+
+        <!-- customs css -->
+        <link href="{{STATIC_URL}}css/login.css" rel="stylesheet" />
+        <link href="{{STATIC_URL}}css/form_login.css" rel="stylesheet" />
+            <style >
+                .BgSlide-1 {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+                    /*background: url('{{STATIC_URL}}img/background/bg-6.jpg')no-repeat right top scroll;*/
+                    -webkit-background-size: cover;
+                    -moz-background-size: cover;
+                    -o-background-size: cover;
+                    background-size: cover;
+                }
+                .BgSlide-2 {
+                    filter: blur(5px);
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+                    /*background: url('{{STATIC_URL}}img/background/bg-5.jpg')no-repeat right top scroll;*/
+                    -webkit-background-size: cover;
+                    -moz-background-size: cover;
+                    -o-background-size: cover;
+                    background-size: cover;
+                }
+                .BgSlide-3 {
+                    filter: blur(5px);
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+                    /*background: url('{{STATIC_URL}}img/background/bg-3.jpg')no-repeat right top scroll;*/
+                    -webkit-background-size: cover;
+                    -moz-background-size: cover;
+                    -o-background-size: cover;
+                    background-size: cover;
+                }
+            </style>
+        {% block css %}
+        {% endblock %}
+    </head>
+    <body>
+        {% csrf_token %}
+        
+        {% if success %}
+    	<div class="alert alert-success alert-dismissible" role="alert">
+    		<button type="button" class="close" data-dismiss="alert">
+    			<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+    		</button>
+    		<strong>Success</strong> {{success}}
+    	</div>
+        {% endif %} 
+	
+        {% if error %}
+        <div class="alert alert-warning alert-dismissible" role="alert">
+        	<button type="button" class="close" data-dismiss="alert">
+        		<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+        	</button>
+        	<strong>Error!</strong> {{error}}
+        </div>
+        {% endif %}
+        
+        <div id="home">
+            <div class="col-xs-offset-3 col-xs-5 text-welcome">
+                <p>Bienvenido a <strong>Heybees</strong><span class="login-bee"></span></p>
+                <span>Registrarse es gratis,<br>tus donativos también lo son.<br><strong><em>¡Descubre cómo!</em></strong></span>
+            </div>
+            <div aling="left" id="testimonials" class="carousel slide carousel-fade" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div id="imgCauseOne" class="item active BgSlide-1">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 slide-custom">
+                                   <a id="urlCauseOne"><h1 id="nameCauseOne"></h1></a> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="imgCauseTwo" class="item BgSlide-2">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 slide-custom">
+                                     <a id="urlCauseTwo"><h1 id="nameCauseTwo"></h1></a>                                 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div  id="imgCauseThree" class="item BgSlide-3">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 slide-custom">
+                                   <a id="urlCauseThree"> <h1 id="nameCauseThree"></h1></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FIN CARRUSEL -->
+
+                <div class="col-xs-3 wrap-login-box">
+                    {% block form_top %}
+                    {% endblock %}
+                    {% block form_middle %}
+                    {% endblock %}
+                    {% block form_bottom %}
+                    {% endblock %}
+                </div>
+
+                <div id="footser-end">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12">
+                                <a href="#">Sobre Nosotros</a>
+                                <a href="#">Privacidad</a>
+                                <a href="#">Cookies</a>
+                                <a href="#">Terminos y Condiciones</a>
+                                <a href="#">Contacto</a>
+                                <a href="#">&copy; 2014 Heybees LLC.</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="divLoginViewModel"></div>
+
+        {% block js %}
+        {% endblock %}
+    </body>
+</html>
