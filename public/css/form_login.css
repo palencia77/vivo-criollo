@@ -1,0 +1,103 @@
+
+.wrap-login-box {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	text-align: center;	
+	min-height: 250px;
+	z-index: 11;
+}
+.login-box {
+	position: relative;
+	padding-top: 5px;
+	padding-bottom: 15px;
+	background-color: rgba(0, 0, 0, 0.6);
+	min-height: 250px;
+	color: #fff;
+	  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.sigin-box {
+	position: relative;
+	margin-top: 20px;
+	padding-top: 5px;
+	padding-bottom: 15px;
+	background-color: rgba(0, 0, 0, 0.6);
+	min-height: 250px;
+	color: #fff;
+	  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.login-box h4, .sigin-box h4 {
+	margin-top: 20px;
+	margin-left: 20px;
+	text-align: left;
+}
+
+.login-box h5 {
+	text-align: left;
+}
+
+.login-box h6 {
+	margin-bottom: 15px;
+}
+
+.login-box .form-group {
+	margin-bottom: 10px;
+}
+
+.login-box input, .sigin-box input {
+	color: #FFF;
+-webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+	height: 24px;
+	font-size: 12px;
+	line-height: 13px;
+}
+
+.wrap-login {
+	margin: 0px 10px;
+	padding: 10px 10px 30px;
+	border: solid 1px #FFF;
+		  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.wrap-login h4 {
+/*	display: block;
+	position: relative;
+	padding: 0 15px;
+	top: -30px;
+	width: 10px;
+	background-color: red;*/
+}
+.btn-hb {
+background: #ffab00;
+  background-image: -webkit-linear-gradient(top, #ffab00, #f57c00);
+  background-image: -moz-linear-gradient(top, #ffab00, #f57c00);
+  background-image: -ms-linear-gradient(top, #ffab00, #f57c00);
+  background-image: -o-linear-gradient(top, #ffab00, #f57c00);
+  background-image: linear-gradient(to bottom, #ffab00, #f57c00);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  color: #ffffff;
+  font-size: 1em;
+  padding: 2px 20px 2px 20px;
+  text-decoration: none;
+}
+.btn-hb:hover {
+	background: #fab300;
+  text-decoration: none;
+}
+.psw-text {
+	line-height: 9px;
+	font-size: 9px;
+}
+

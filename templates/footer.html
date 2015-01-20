@@ -1,0 +1,25 @@
+{% load i18n %}
+{% load url from future %}
+<div class="clearfix"></div>
+<div id="footer">
+	<div class="container footer-color">
+		<div class="col-xs-12 col-sm-6">
+			<p>{% trans "footer_section_001" %}</p>
+		</div>
+		<div class="col-xs-9 col-sm-6">
+			<a class="pull-right" href="" target="_blank"><img
+				src="{{STATIC_URL}}img/icon_pinterest_mobile_32x32.png"></a> <a
+				class="pull-right" href="https://twitter.com/WeAreHeybees" target="_blank"><img
+				src="{{STATIC_URL}}img/icon_twitter_mobile_32x32.png"></a> <a
+				class="pull-right" href="https://www.facebook.com/Heybees" target="_blank"><img
+				src="{{STATIC_URL}}img/icon_facebook_mobile_32x32.png"></a>
+		</div>
+	</div>
+
+	<div class="col-sm-12 text-center footer-link">
+		<a href="#">{% trans "footer_section_002" %}</a>
+		<a href=href="{% url 'privacy' %}">{% trans "footer_section_003" %}</a>
+		<!-- <a href="{% url 'cookies' %}">{% trans "footer_section_004" %}</a> -->
+		<a href="{% url 'contact' %}">{% trans "footer_section_005" %}</a>
+	</div>
+</div>

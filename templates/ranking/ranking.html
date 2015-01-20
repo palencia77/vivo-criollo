@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load url from future %}
+{% block body %}
+
+<div class="bg-ranking">	
+	<div id="content" class="col-xs-10 col-xs-offset-1">
+		<h3>Ranking</h3>
+		<hr class="hexagono">
+		<div class="col-xs-12">
+			<div class="row">
+				<div class="bindableRanking">
+					<div class="row">	
+						<div class="col-md-4">
+							<div class="table-rank">
+								<div class="row-header">
+									<h4>Semanal</h4>
+								</div>
+								<ul>
+									<li data-bind="foreach:  weekly_ranking">
+										<a data-bind="attr:{href: short_url}" class="row-rank">
+											<p data-bind="text : position_wranking"> </p>  
+											<img class="img-circle" data-bind="attr:{src: avatar_src}">
+											<p data-bind="text: full_name"> </p>
+											<span class="coin-secore"><span class="love-score"> </span><p data-bind="text: love_score"> </p></span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="table-rank">
+								<div class="row-header">
+									<h4>Histórico</h4>
+								</div>
+								<ul>
+									<li data-bind="foreach: ranking">
+										<a data-bind="attr:{href: short_url}" class="row-rank">
+											<p data-bind="text : position_ranking"> </p>
+											<img class="img-circle" data-bind="attr:{src: avatar_src}">
+											<p data-bind="text: full_name"> </p>
+											<span class="coin-secore"><span class="love-score"> </span><p data-bind="text: love_score"> </p></span>
+										</a>
+									</li>
+								</ul>
+								<div class="row-footer">
+									<a href="#" data-bind="visible: !ranking_is_lastpage(),click: HistoricalRanking">Ver más usuarios</a>
+								</div>
+							</div>
+						</div>
+                        <div class="col-md-4">
+							<div class="table-rank">
+								<div class="row-header">
+									<h4>Héroe de la Semana</h4>
+								</div>
+								<ul>
+									<li data-bind="foreach: weekly_hero">
+										<a data-bind="attr:{href: short_url}">
+											<img class="img-circle" data-bind="attr:{src: avatar_src}" width="60px" height="60px" align="center">
+											<p data-bind="text: full_name"> </p>
+											<span class="coin-secore"><span class="love-score"> </span><p data-bind="text: love_score"> </p></span>
+										</a>
+									</li>
+								</ul>
+								<div class="row-footer">
+									<a href="#" data-bind="visible: !ranking_is_lastpage(),click: HistoricalRanking">Ver más usuarios</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
+
+{% block css %}
+{% endblock %}
+
+{% block js %}
+	<script src="{{STATIC_URL}}js/viewmodels/vmRanking.js"></script>
+	<script type="text/javascript">
+		HistoricalRanking();
+		WeeklylRanking();
+	</script>
+{% endblock %}

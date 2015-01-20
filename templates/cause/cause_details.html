@@ -1,0 +1,156 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load url from future %}
+{% block body %}
+
+<div id="divPersonViewModel" class="row">
+	<div class="" data-bind="foreach: selected_person"> </div>
+</div>
+<div id="divCauseViewModel">
+	<div data-bind="foreach: selected_cause">
+		<div class="causes-background">		
+			<div class="col-xs-12 col-sm-7 col-sm-offset-1">
+				<h1 data-bind="text: name"></h1>
+				<div class="col-xs-12 col-sm-10">
+					<div class="row">
+						<div class="embed-responsive embed-responsive-16by9">
+							<iframe width="560" height="315" data-bind="attr: {src: url_promotional_video}" frameborder="0" allowfullscreen></iframe>
+						</div>
+						<div class="display-causes-section">
+							<div class="progress-cause" data-bind="progress: { value: loveMeterPercentage, type: 'warning', text: 'Recaudado', textHidden: 1, animated: 1, striped: 0 }"></div>
+							<p><i class="glyphicon glyphicon-map-marker"> </i> Love <strong>Goal</strong></p>
+							<p data-bind="text: love_meter"></p><p> / </p><p data-bind="text: love_goal"></p>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-7 col-sm-offset-1">
+			<div class="col-xs-12 col-sm-8 description-causes-details">
+				<div class="row">
+					<h3 data-bind="text: name"></h3>
+					<a href="#"><i class="glyphicon glyphicon-map-marker"> </i> Barquisimeto, Venezuela</a>
+					<p data-bind="html: description"></p>	
+					<div class="action-causes-section">
+						{% include "sharingCausesModal.html" %}
+						<a data-bind="click: shareCause" data-toggle="modal" data-target="#shareModal"><span class="bee"></span>Fly</a>
+						<p data-bind="text: fly_counter"></p>
+						{% comment %}
+						<button type="button" data-bind="click: shareCause" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+									  Launch demo modal
+						</button>{% endcomment %}
+						<a data-bind="click: causeLoveAction"><span data-bind="attr:{class: love_action_class}"></span>Love it</a>
+						<p data-bind="text: love_counter"></p><p>/</p><p data-bind="text: love_goal"></p></span>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-4">
+				<div class="action-causes">
+					<div class="col-xs-12">
+						<a data-bind="popover: {template: 'popoverCauseDetails'}, event: { click: previewPartnerProfile }" style="cursor: pointer;">
+							<div class="avatar-people" data-bind="attr:{id: partner.id_resource}">
+								<img data-bind="attr:{src: partner.avatar_src}">
+							</div>
+							<h5 data-bind="text: partner.name"></h5>
+						</a>
+						<script type="text/html" id="popoverCauseDetails">
+						<div style="height: 200px; width: 400px;">
+						<div data-bind="foreach: selected_partner">
+							<img class="img-responsive img-circle" data-bind="attr:{src: avatar_src}" alt="">
+							<label data-bind="text: name"></label>
+							<label data-bind="text: description"></label>
+							<img class="img-responsive img-circle" data-bind="attr:{src: cover_src}" alt="">
+						</div>
+						</div>
+						</script>
+						<label>{% trans "rol_name_001" %}</label>
+					</div>
+					<div class="col-xs-12">
+						<div class="avatar-people" data-bind="attr:{id: celebrity.id_resource}">
+							<img data-bind="attr:{src: celebrity.avatar_src}">
+						</div>
+						<h5 data-bind="text: celebrity.name"></h5>
+						<label>{% trans "rol_name_002" %}</label>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="col-xs-12 col-sm-3">
+	<div id="awardViewModel">	
+		<div data-bind="foreach: awards" class="wrap-box-award">
+			<div class="box-award">
+				<a name="imgAvatar" data-toggle="modal" data-target="#myModal" data-bind="click: showAward">
+					<img data-bind="attr:{src: avatar_src}" alt="">
+				</a>
+				<div class="awd-description">
+					<div class="awd-description-row">
+						<div class="awd-description-col"><label style="cursor: pointer" data-bind="text: title"></label></div>
+						<div class="awd-description-col amount-col"><i class="glyphicon glyphicon-heart">&#160;</i><p data-bind="text: amount_love"></p></div>
+					</div>
+				</div>
+				<hr>
+				<div class="donate-by">
+					<div class="donate-by-row">
+						<div class="donate-by-col">
+							<p>Donado por:</p>
+							<a data-bind="popover: {template: 'popoverAwardList', placement: 'top', trigger: 'hover'}, event: { mouseover: previewBeeProfile }" style="cursor: pointer;">
+								<div class="avatar-donate">
+									<img data-bind="attr:{src: owner.avatar_src}" alt="avatar" />
+								</div>
+								<p data-bind="text: owner.name"></p>
+							</a>
+							<script type="text/html" id="popoverAwardList">
+								<div class="test1" style="height: 200px; width: 400px;">
+									<div data-bind="foreach: selected_bee">
+										<img class="img-responsive img-circle" data-bind="attr:{src: avatar_src}" alt="">
+										<label data-bind="text: name"></label>
+										<label data-bind="text: description"></label>
+										<img data-bind="attr:{src: cover_src}" alt="">
+									</div>
+								</div>
+							</script>
+						</div>
+						<div class="donate-by-col fly-col">
+							<a href="#" class="btn-block-fl"><span class="bee"></span>Fly</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		{% include 'award/modal_award_details.html' %}
+		</div>
+	</div>
+</div>
+
+<div id="divPersonViewModel"></div>
+
+<div class="clearfix"></div>
+
+<div id="divPostViewModel" class="col-xs-12 col-sm-10 col-sm-offset-1">
+	{% include "post/posts_of_bee.html" %}
+</div>
+{% endblock %} 
+{% block css %}
+<link href="{{STATIC_URL}}js/jquery/jquery-loadmask/jquery.loadmask.css" rel="stylesheet">
+{% endblock %}
+{% block js %}
+<script src="{{STATIC_URL}}js/jquery/jquery-loadmask/jquery.loadmask.min.js"></script>
+<script src="{{STATIC_URL}}js/models/comment.js"></script>
+<script src="{{STATIC_URL}}js/models/post.js"></script>
+<script src="{{STATIC_URL}}js/models/award.js"></script>
+<script src="{{STATIC_URL}}js/models/cause.js"></script>
+<script src="{{STATIC_URL}}js/models/resource.js"></script>
+<script src="{{STATIC_URL}}js/viewmodels/vmPost.js"></script>
+<script src="{{STATIC_URL}}js/viewmodels/vmAward.js"></script>
+<script src="{{STATIC_URL}}js/viewmodels/vmCause.js"></script>
+<script type="text/javascript">
+		// Receives data from the cause view: 
+		{% autoescape off %}
+		var cause = {{ cause }}
+		{% endautoescape %}
+		showCauseDetails(cause);
+	</script>
+{% endblock %}	

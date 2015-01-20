@@ -1,0 +1,605 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Heybees <Developers Team>, 2014.
+# Heybees <j.palencia@heybees.com>, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Report-Msgid-Bugs-To: Heybees Developers Team\n"
+"POT-Creation-Date: 2014-10-09\n"
+"PO-Revision-Date: 2014-10-09 16:53-0430\n"
+"Last-Translator: Heybees <j.palencia@heybees.com>\n"
+"Language-Team: Heybees Developers Team\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Virtaal 0.7.1\n"
+
+#################################################################################################
+# ARCHIVO BASE/INDEX DEL SITIO WEB
+# ARCHIVO: base.html
+# RUTA: \heybeesweb\templates\
+#################################################################################################
+msgid ""
+msgstr ""
+
+#.
+#: \templates\base.html.py:39
+msgid "site_title"
+msgstr "Heybees - Haz posible lo imposible"
+
+
+#################################################################################################
+# CABECERA DEL CUERPO DEL SITIO WEB
+# ARCHIVO: header.html
+# RUTA: \heybeesweb\templates\
+#################################################################################################
+msgid ""
+msgstr ""
+
+#.
+#: \heybeesweb\templates\header.html:17
+msgid "language_spanish"
+msgstr "Español"
+
+#.
+#: \heybeesweb\templates\header.html:18
+msgid "language_english"
+msgstr "Ingles"
+
+#.
+#: \heybeesweb\templates\header.html:88
+msgid "header_menu_001"
+msgstr "Heybees"
+
+#.
+#: \heybeesweb\templates\header.html:89
+msgid "header_menu_002"
+msgstr "Causas"
+
+#.
+#: \heybeesweb\templates\header.html:90
+msgid "header_menu_003"
+msgstr "Productos"
+
+#.
+#: \heybeesweb\templates\header.html:91
+msgid "header_menu_004"
+msgstr "Embajadores"
+
+#.
+#: \heybeesweb\templates\header.html:92
+msgid "header_menu_005"
+msgstr "Inversores"
+
+
+#################################################################################################
+# CUERPO DEL PORTAL INICIAL DEL SITIO WEB
+# ARCHIVO: home.html
+# RUTA: \heybeesweb\templates\home\
+#################################################################################################
+msgid ""
+msgstr ""
+
+#.
+#: \templates\home\home.html:7
+msgid "home_first_view_001"
+msgstr "Sé protagonista del cambio, únete al sueño Heybees"
+
+#.
+#: \templates\home\home.html:15
+msgid "home_first_view_002"
+msgstr "En <strong>Heybees</strong> ayudamos a mejorar vidas, una a una, uniendo la solidaridad de miles de personas y organizaciones con una causa social, haciendo de  pequeñas acciones algo extraordinario"
+
+#.
+#: \templates\home\home.html:16
+msgid "home_first_view_003"
+msgstr "Únete, apoya y comparte "
+
+#.
+#: \templates\home\home.html:46
+msgid "home_causes_001"
+msgstr "Causas Heybees"
+
+#.
+#: \templates\home\home.html:47
+msgid "home_causes_002"
+msgstr "Nos cautiva la posibilidad de ayudar a hacer de este un <strong>mejor mundo</strong>, por eso nos enfocamos en lo realizable."
+
+#.
+#: \templates\home\home.html:48
+msgid "home_causes_003"
+msgstr "Identificamos nuestras causas como <strong>necesidades solucionables</strong>, gracias a la vinculación de organizaciones, líderes y miles de héroes como tú."
+
+#.
+#: \templates\home\home.html:49
+msgid "home_causes_004"
+msgstr "Descubre cómo <strong>ser parte de la solución</strong>"
+
+#.
+#: \templates\home\home.html:62
+msgid "home_causes_005"
+msgstr "Todo comienza con una necesidad"
+
+#.
+#: \templates\home\home.html:63
+msgid "home_causes_006"
+msgstr "<em><strong>“Asistencia a la cancha” </strong></em> fue una de nuestras primeras campañas. 170 chicos esperaban tener un grandioso lugar para poder soñar en grande, nosotros dijimos: <strong>¡Hagámoslo posible!</strong>"
+
+#.
+#: \templates\home\home.html:67
+msgid "home_causes_007"
+msgstr "En <strong>Heybees</strong> certificamos las causas para que te involucres con necesidades reales y nos ayudes a solucionarlas.</strong>"
+
+#.
+#: \templates\home\home.html:84
+msgid "home_causes_008"
+msgstr "¿Cómo lo hacemos?"
+
+#.
+#: \templates\home\home.html:89
+msgid "home_causes_009"
+msgstr "Aliados"
+
+#.
+#: \templates\home\home.html:90
+msgid "home_causes_010"
+msgstr "Organizaciones socialmente responsables que contribuyen económicamente en la dinámica benéfica."
+
+#.
+#: \templates\home\home.html:94
+msgid "home_causes_011"
+msgstr "Embajadores"
+
+#.
+#: \templates\home\home.html:95
+msgid "home_causes_012"
+msgstr "Personalidades con influencia en la opinión pública que ayudarán a conseguir la meta difundiendo la causa en sus redes y entornos."
+
+#.
+#: \templates\home\home.html:105
+msgid "home_causes_013"
+msgstr "Responsable"
+
+#.
+#: \templates\home\home.html:106
+msgid "home_causes_014"
+msgstr "Es la persona que manifiesta una problemática social y actúa como delegado de la misma."
+
+#.
+#: \templates\home\home.html:126
+msgid "home_causes_015"
+msgstr "¿Cómo puedes ayudar?"
+
+#.
+#: \templates\home\home.html:130
+msgid "home_causes_016"
+msgstr "Interactúa"
+
+#.
+#: \templates\home\home.html:131
+msgid "home_causes_017"
+msgstr "Soluciona causas con <strong>Love</strong> y <strong>Fly</strong>. Con cada Fly compartes el contenido de la causa en tus redes, dándola a conocer."
+
+#.
+#: \templates\home\home.html:136
+msgid "home_causes_018"
+msgstr "Todos podemos ser <strong>Bees,</strong> compartiendo contenido para solucionar cientos de causas, sin necesidad de donaciones <em>¡Ayudar ahora es fácil y gratuito!</em>"
+
+#.
+#: \templates\home\home.html:153
+msgid "home_causes_019"
+msgstr "Convíertete en el héroe de la causa"
+
+#.
+#: \templates\home\home.html:163
+msgid "home_causes_020"
+msgstr "Gracias a todos los <strong>Love</strong> y <strong>Fly</strong> que nuestros Bees regalaron llegamos a la meta. Sí juntos creemos, juntos lo lograremos. La “Ciudad de los Muchachos” ya tiene su canchita arreglada, ahora 170 niños podrán soñar y driblar en una cancha de baloncesto como nueva."
+
+#.
+#: \templates\home\home.html:164
+msgid "home_causes_021"
+msgstr "<em>"La solidaridad es símbolo de unión y de paz"</em><br>Paquita Ravasio"
+
+#.
+#: \templates\home\home.html:171
+msgid "home_causes_022"
+msgstr "Aquí puedes ser parte del cambio"
+
+#.
+#: \templates\home\home.html:173
+msgid "home_causes_023"
+msgstr "Soy un Bee"
+
+#.
+#: \templates\home\home.html:174
+msgid "home_causes_024"
+msgstr "Soy un Aliado"
+
+#.
+#: \templates\home\home.html:175
+msgid "home_causes_025"
+msgstr "Soy un Embajador"
+
+#.
+#: \templates\home\home.html:197
+msgid "home_products_001"
+msgstr "<small>Haz grande tu organización</small><br>ayudando"
+
+#.
+#: \templates\home\home.html:201
+msgid "home_products_002"
+msgstr "Conoce los beneficios de poner en práctica una cultura de negocios con un marcado sentido social. El programa de <strong>Aliados</strong> brinda soluciones eficaces a organizaciones comprometidas con el desarrollo sustentable."
+
+#.
+#: \templates\home\home.html:206
+msgid "home_products_003"
+msgstr "Conoce nuestros servicios:"
+
+#.
+#: \templates\home\home.html:208
+msgid "home_products_004"
+msgstr "Publicidad nativa. Tú marca como parte integral de la experiencia del usuario."
+
+#.
+#: \templates\home\home.html:209
+msgid "home_products_005"
+msgstr "Coautor del desarrollo de respuestas concretas para las problemáticas sociales existentes en tu entorno."
+
+#.
+#: \templates\home\home.html:210
+msgid "home_products_006"
+msgstr "Tu organización como protagonista de las buenas noticias que todos querrán compartir."
+
+#.
+#: \templates\home\home.html:212
+msgid "home_products_007"
+msgstr "Productos"
+
+#.
+#: \templates\home\home.html:228
+msgid "home_products_008"
+msgstr "Diseño de campañas de marketing social"
+
+#.
+#: \templates\home\home.html:229
+msgid "home_products_009"
+msgstr "Numerosos sueños esperan por ser cumplidos, tú nos dices cuál es el impacto que deseas generar y nuestro equipo diseñará la campaña a la medida de tu presupuesto."
+
+#.
+#: \templates\home\home.html:230
+msgid "home_products_010"
+msgstr "Contribuye al cambio positivo de muchas vidas "
+
+#.
+#: \templates\home\home.html:236
+msgid "home_products_011"
+msgstr "Documentación de la causa"
+
+#.
+#: \templates\home\home.html:237
+msgid "home_products_012"
+msgstr "Registra tus acciones; desde una fotografía instantánea hasta un video producido por profesionales."
+
+#.
+#: \templates\home\home.html:238
+msgid "home_products_013"
+msgstr "Cautiva a tu audiencia "
+
+#.
+#: \templates\home\home.html:257
+msgid "home_products_014"
+msgstr "Comunica tus acciones de responsabilidad social"
+
+#.
+#: \templates\home\home.html:258
+msgid "home_products_015"
+msgstr "Un gran número de empresas no comunican lo que hacen. Sabemos que hay que hacer el bien y darlo a conocer; esta es nuestra especialidad."
+
+#.
+#: \templates\home\home.html:259
+msgid "home_products_016"
+msgstr "Ayuda, inspira y rentabiliza tu inversión "
+
+#################################################################################################
+# SECCIÓN CONTACTO DEL SITIO WEB
+# ARCHIVO: contact.html
+# RUTA: \heybeesweb\templates\
+#################################################################################################
+msgid ""
+msgstr ""
+
+#.
+#: \templates\contact.html:271
+msgid "contact_001"
+msgstr "¡Queremos saber de ti!"
+
+#.
+#: \templates\contact.html:272
+msgid "contact_002"
+msgstr "Sí deseas ponerte en contacto con nosotros, rellena la ficha de contacto ¡Acompáñanos a hacerlo posible!"
+
+#.
+#: \templates\contact.html:280
+msgid "contact_003"
+msgstr "Nombre"
+
+#.
+#: \templates\contact.html:285
+msgid "contact_004"
+msgstr "Correo Electronico"
+
+#.
+#: \templates\contact.html:294
+msgid "contact_005"
+msgstr "Asunto"
+
+#.
+#: \templates\contact.html:296
+msgid "contact_006"
+msgstr "Seleccionar:"
+
+#.
+#: \templates\home\home.html:305
+msgid "contact_007"
+msgstr "Mensaje:"
+
+#.
+#: \templates\contact.html:312
+msgid "contact_008"
+msgstr "Enviar Mensaje"
+
+#.
+#: \templates\contact.html:290
+msgid "contact_009"
+msgstr "Soporte a clientes"
+
+#.
+#: \templates\contact.html.html:307
+msgid "contact_010"
+msgstr "Aliados"
+
+#.
+#: \templates\contact.html.html:307
+msgid "contact_011"
+msgstr "Inversionistas"
+
+#################################################################################################
+# PIE DE PAGINA DEL SITIO WEB
+# ARCHIVO: footer.html
+# RUTA: \heybeesweb\templates\
+#################################################################################################
+msgid ""
+msgstr ""
+
+#. en: Copyright &copy; 2014 Heybees, LLC. All Rights Reserved.
+#: \templates\footer.html:7
+msgid "footer_section_001"
+msgstr "Copyright &copy; 2014 Heybees, LLC. Todos los Derechos Reservados."
+
+#. en: Terms
+#: \templates\footer.html:20
+msgid "footer_section_002"
+msgstr "Condiciones"
+
+#. en: Privacity
+#: \templates\footer.html:21
+msgid "footer_section_003"
+msgstr "Privacidad"
+
+#. en: Cookies
+#: \templates\footer.html:22
+msgid "footer_section_004"
+msgstr "Cookies"
+
+#. en: Contact us
+#: \templates\footer.html:23
+msgid "footer_section_005"
+msgstr "Contactos"
+
+
+#################################################################################################
+# SECCION DE LISTA DE CAUSAS Y DETALLE DE LA CAUSA
+# ARCHIVO: causes_list.html
+# RUTA: \heybeesweb\templates\cause\
+#################################################################################################
+msgid ""
+msgstr ""
+
+#. en: Causes
+#: \templates\cause\causes_list.html:6
+msgid "causelist_head_title"
+msgstr "Causas"
+
+#.
+#: \templates\cause\causes_list.html:9
+msgid "causelist_head_description"
+msgstr "Conoce sus historias e involúcrate en la solución haciendo lo que ya conoces, comprobando el valor positivo de inspirar y colaborar compartiendo en tus redes las causas que has ayudado a resolver."
+
+#. en: Partner
+#: \templates\cause\causes_list.html:
+msgid "rol_name_001"
+msgstr "Aliado"
+
+#. en: Ambassador
+#: \templates\cause\causes_list.html:
+msgid "rol_name_002"
+msgstr "Embajador"
+
+#.
+#: \templates\cause\causes_list.html:
+msgid "tag_become_a_hero"
+msgstr "¡Conviértete en Héroe!"
+
+
+#################################################################################################
+# SECCION DE PRODUCTOS
+# ARCHIVO: partners.html
+# RUTA: \heybeesweb\templates\partner\
+#################################################################################################
+msgid ""
+msgstr ""
+
+#. ¿Debe tradurcirse?
+#: \templates\partner\partners.html:89
+msgid "product_001_name"
+msgstr "Dreams Labs"
+
+#.
+#: \templates\partner\partners.html:92
+msgid "product_001_title"
+msgstr "Diseño de campañas<br>de <strong>marketing social</strong>"
+
+#.
+#: \templates\partner\partners.html:92
+msgid "product_001_subtitle"
+msgstr "Tu marca<br>es la estrella"
+
+#.
+#: \templates\partner\partners.html:93
+msgid "product_001_description"
+msgstr "Enfocados en tu satisfacción, te ofrecemos el servicio de diseño de campañas de marketing social personalizadas; adaptadas a tu presupuesto, objetivos y ámbito social al que desees orientar tus acciones de <strong>Responsabilidad Social Empresarial</strong>"
+
+#.
+#: \templates\partner\partners.html:100
+msgid "product_001_carousel_page_001_tilte"
+msgstr "Estudio de Audiencia"
+
+#.
+#: \templates\partner\partners.html:101
+msgid "product_001_carousel_page_001_description"
+msgstr "Al comprender cuál es tu target conoces hacia dónde se deben de dirigir los esfuerzos comunicacionales, con el fin de garantizar la efectividad de la campaña."
+
+#.
+#: \templates\partner\partners.html:106
+msgid "product_001_carousel_page_002_tilte"
+msgstr "Causa Heybees"
+
+#.
+#: \templates\partner\partners.html:107
+msgid "product_001_carousel_page_002_description"
+msgstr "Se designará a la campaña una causa social verificada por nuestro equipo, o de tener una propia, optimizamos tu propuesta."
+
+#.
+#: \templates\partner\partners.html:112
+msgid "product_001_carousel_page_003_tilte"
+msgstr "Planificación y logística"
+
+#.
+#: \templates\partner\partners.html:113
+msgid "product_001_carousel_page_003_description"
+msgstr "Por cada problema, una solución. Elaboramos estrategias diferenciadas para la solución de la causa, tomando en cuenta el tiempo y recursos disponibles."
+
+#.
+#: \templates\partner\partners.html:118
+msgid "product_001_carousel_page_004_tilte"
+msgstr "Plan de Marketing"
+
+#.
+#: \templates\partner\partners.html:119
+msgid "product_001_carousel_page_004_description"
+msgstr "Reforzar tu imagen como una organización socialmente responsable, tanto como, centralizar los esfuerzos para generar la integración de los consumidores con tu marca, son nuestros objetivos principales para la laboración de una campaña de marketing. Para cumplirlos, te damos las estrategias y distintas opciones para dar a conocer tus acciones de Responsabilidad Social Empresarial."
+
+#. ¿Debe tradurcirse?
+#: \templates\partner\partners.html:209
+msgid "product_002_name"
+msgstr "Online Content"
+
+#.
+#: \templates\partner\partners.html:212
+msgid "product_002_title"
+msgstr "Documentación<br> de la causa"
+
+#.
+#: \templates\partner\partners.html:212
+msgid "product_002_subtitle"
+msgstr "<small>Involúcrate<br> con cada causa</small>"
+
+#.
+#: \templates\partner\partners.html:213
+msgid "product_002_description"
+msgstr "Crea impacto con tu campaña de <strong>marketing social</strong>, haciendo auténtico aquello que cuentas a tus seguidores. Tú nos dices qué impresión deseas generar y nosotros la producimos por ti"
+
+#.
+#: \templates\partner\partners.html:220
+msgid "product_002_carousel_page_001_tilte"
+msgstr "Documentación Instantáneas"
+
+#.
+#: \templates\partner\partners.html:221
+msgid "product_002_carousel_page_001_description"
+msgstr "Si este es tu caso, una fotografía inmediata a la causa tomadas desde un teléfono o suministradas por ti es una buena opción."
+
+#.
+#: \templates\partner\partners.html:226
+msgid "product_002_carousel_page_002_tilte"
+msgstr "Carrusel de Fotografías"
+
+#.
+#: \templates\partner\partners.html:227
+msgid "product_002_carousel_page_002_description"
+msgstr "¿Has escuchado alguna vez que una imagen dice más que mil palabras? Te ofrecemos fotografías con un aspecto cuidado y de gran impacto visual tomadas por nuestro equipo especializado. Arma una galería fotográfica y cuenta con más de una fotografía tu gran labor social."
+
+#.
+#: \templates\partner\partners.html:232
+msgid "product_002_carousel_page_003_tilte"
+msgstr "Cuenta Cuentos Digitales"
+
+#.
+#: \templates\partner\partners.html:233
+msgid "product_002_carousel_page_003_description"
+msgstr "Contar historias es nuestra especialidad. Para una campaña de marketing social, el video juega un rol importante; haz que tu proyecto cobre vida y cautiva a tu audiencia con una producción audiovisual elaborada a tu medida."
+
+#. ¿Debe tradurcirse?
+#: \templates\partner\partners.html:226
+msgid "product_003_name"
+msgstr "Content Distribution"
+
+#.
+#: \templates\partner\partners.html:329
+msgid "product_003_title"
+msgstr "Comunica tus acciones de Responsabilidad Social Empresarial"
+
+#.
+#: \templates\partner\partners.html:329
+msgid "product_003_subtitle"
+msgstr "Convíerte<br> en Héroe"
+
+#.
+#: \templates\partner\partners.html:330
+msgid "product_003_description"
+msgstr "Capitaliza tu inversión y da a conocer al mundo tus esfuerzos por hacerlo mejor. Si no lo comunicas nunca pasó, es por ello que te ofrecemos en nuestra plataforma los servicios de publicidad nativa, banners, Newsletters y otros planes de distribución de contenidos para la gran red de redes"
+
+#.
+#: \templates\partner\partners.html:337
+msgid "product_003_carousel_page_001_tilte"
+msgstr "Comparte en la Colmena"
+
+#.
+#: \templates\partner\partners.html:338
+msgid "product_003_carousel_page_001_description"
+msgstr "Disfruta de los beneficios de nuestra función Fly; con esta acción tú contenido se comparte en la plataforma de Heybees y en otras plataformas sociales destacadas, difundiendo tú marca, teniendo como valor agregado la asociación de imagen positiva al ser benefactor de una Causa"
+
+#.
+#: \templates\partner\partners.html:343
+msgid "product_003_carousel_page_002_tilte"
+msgstr "Redes Externas de Distribución de Contenido"
+
+#.
+#: \templates\partner\partners.html:344
+msgid "product_003_carousel_page_002_description"
+msgstr "¡Actúa y comunícalo al mundo! Las agencias de distribución impactan diariamente a miles de personas sedientas de buenas noticias y queremos que las acciones altruistas de tu organización sean la protagonista."
+
+#.
+#: \templates\partner\partners.html:349
+msgid "product_003_carousel_page_003_tilte"
+msgstr "Redes Externas de Distribución de Contenido"
+
+#.
+#: \templates\partner\partners.html:350
+msgid "product_003_carousel_page_003_description"
+msgstr "Te ofrecemos los servicios de distribución de contenido en medios digitales, conocemos cuales son los canales apropiados para llegar a la gente adecuada, una herramienta clave para dejar constancia y testimonio de la labor cumplida."
+

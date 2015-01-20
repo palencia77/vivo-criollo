@@ -1,0 +1,33 @@
+<div id="shareModal" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title" align="center">Haz Fly: Comparte con las redes sociales</h4>
+			</div>
+			<div class="modal-body" align="center">
+				<table id="dataTable" width="200px" border="1" align="center">
+					<TR>
+						<TD> 
+							<img  src="{{STATIC_URL}}img/icon/icon_facebook-signup-color_32x32.png" data-bind="click: shareCauseWithFacebook" width="40px"  title="Sign Up Using Facebook" onmouseover="this.src='{{STATIC_URL}}img/icon/icon_facebook-signup-light_32x32.png'" onmouseout="this.src='{{STATIC_URL}}img/icon/icon_facebook-signup-color_32x32.png'" style="cursor: pointer">
+						</TD>
+						<TD><a id="shareTwitterCause" onclick="shareCauseWithTwitter()">
+								<img src="{{STATIC_URL}}img/icon/icon_twitter-signup-color_32x32.png" width="40px" title="Sign Up Using Facebook" onmouseover="this.src='{{STATIC_URL}}img/icon/icon_twitter-signup-light_32x32.png'" onmouseout="this.src='{{STATIC_URL}}img/icon/icon_twitter-signup-color_32x32.png'" style="cursor: pointer">
+							</a>
+						</TD>
+						<TD>
+							<img class="googleplus-signup top-buffer-xs" src="{{STATIC_URL}}img/icon/icon_googleplus_signup_dark.png" width="40px" title="Sign Up Using Google Plus" alt="Sign Up Using Google Plus" onMouseOver="this.src='{{STATIC_URL}}img/icon/icon_googleplus_signup_light.png'" onMouseOut="this.src='{{STATIC_URL}}img/icon/icon_googleplus_signup_dark.png'">
+						</TD>
+						<TD>
+							<script type="IN/Share" data-bind="dataurl: short_url, dataonsuccess:'shareCauseWithLinkedin'"></script>
+						</TD>
+					</TR>
+				</table>
+				<p class="text-warning"><small>If you don't save, your changes will be lost.</small></p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>

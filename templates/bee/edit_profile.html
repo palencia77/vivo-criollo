@@ -1,0 +1,65 @@
+{% extends 'base.html' %} {% load i18n %} {% load url from future %} 
+{% block body %}
+<div class="container">
+	<div id="content">	
+		<div id="divPersonViewModel" class="col-xs-12">
+		           <div data-bind="foreach: selected_edit_person">
+		               <div class="box-profile"><!-- Perfil del Usuario -->
+		                <div class="profile-media">
+		                    	<img data-bind="attr:{src: cover_src}" data-toggle="modal" data-target="#cover-modal">
+		                    <hgroup>
+		                        <h4 data-bind="visible: !full_name_editing(), text: full_name"></h4>
+		                        <div class="edit-post" data-bind='fadeVisible: full_name_editable'>
+                                	<i type="button" data-bind="click:editFullNameSeeTextbox" title="Edit full name" class="glyphicon glyphicon-pencil"> </i>
+                                </div>
+                                <input id="inputFullName" style="color:#010101;width: 254px;" data-bind="visible: full_name_editing(), value: full_name, valueUpdate: 'afterkeydown', event: {keypress: editFullName}" />
+		                        <h4><strong><em data-bind="visible: !current_status_heybees_editing(), text: current_status_heybees"></em></strong></h4>
+		                        <span class="edit-post" data-bind='fadeVisible: current_status_heybees_editable'>
+                                	<i type="button" data-bind="click:editCurrentStatusHeybeesSeeTextbox" title="Edita tu estado en heybees" class="glyphicon glyphicon-pencil"> </i>
+                                </span>
+                                <input id="inputCurrentStatusHeybees" style="color:#010101;width: 254px;" data-bind="visible: current_status_heybees_editing(), value: current_status_heybees, valueUpdate: 'afterkeydown', event: {keypress: editCurrentStatusHeybees}" />
+		                    </hgroup>
+		                </div>
+		
+		                <div class="profile-bee">
+		                    <a class="avatar-bee" data-toggle="modal" data-target="#avatar-modal"><img data-bind="attr:{src: avatar_src}"  alt="Bee"></a>
+		                    <hgroup>
+		                        <h6><i class="glyphicon glyphicon-home"> </i> Barquisimeto, Lara</h6>
+		                        <h6><i class="glyphicon glyphicon-calendar"> </i> 17 Marzo</h6>
+		                    </hgroup>
+		                </div>
+		                <div class="profile-skill">
+		                    <div class="skill-row">
+		                        <div class="skill-col"><h4>Skill</h4></div>
+		                    </div>
+		                    <div class="skill-row">
+		                        <div class="skill-col"><i class="glyphicon glyphicon-heart-empty"> </i> Love Coins <h5 align="center" data-bind="text : love_coin"></h5></div>
+		                        <div class="skill-col"><i class="glyphicon glyphicon-heart"> </i> Love Score <h5 align="center" data-bind="text: love_score"></h5></div>
+		                        <div class="skill-col"><i class="glyphicon glyphicon-signal"> </i> Ranking</div>
+		                    </div>
+		                </div>
+		            </div><!-- /Perfil del Usuario -->
+		          </div>
+		          {% include "bee/edit_avatar_bee_modal.html" %}
+				  {% include "bee/edit_cover_bee_modal.html" %}
+		</div>
+	</div>
+</div>
+
+{% endblock %} {% block css %}
+<link href="{{STATIC_URL}}js/jquery/jquery-loadmask/jquery.loadmask.css" rel="stylesheet">
+{% endblock %} {% block js %}
+<script src="{{STATIC_URL}}js/jquery/jquery-timeago/jquery.timeago.min.js"></script>
+<script src="{{STATIC_URL}}js/jquery/jquery-timeago/jquery.timeago.js"></script>
+<script src="{{STATIC_URL}}js/jquery/jquery-loadmask/jquery.loadmask.min.js"></script>
+<script src="{{STATIC_URL}}js/models/celebrity.js"></script>
+<script src="{{STATIC_URL}}js/models/comment.js"></script>
+<script src="{{STATIC_URL}}js/models/resource.js"></script>>
+<script type="text/javascript">
+		// Receives data from the cause view: 
+		{% autoescape off %}
+		var person = {{ person }}
+		{% endautoescape %}
+		editPersonProfile(person);
+</script>
+{% endblock %}

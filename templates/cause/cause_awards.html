@@ -1,0 +1,56 @@
+<div class="modal fade" id="causeAwardsModal" tabindex="-1"
+	role="dialog" aria-labelledby="awardListModal" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+		<divclass="modal-content">
+			<!--Modal header-->
+			<div class="modal-header">
+				<button type="button" class="close">
+					<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+				</button>
+				<h3 class="modal-title" data-bind="foreach: selectedBee">
+					<small><label data-bind="text: name"></label></small> <img
+						src="/public/images/nav-arrow-right-x32.png" /> <strong>Awards</strong>
+				</h3>
+			</div>
+			<!--Modal body-->
+			<div class="modal-body">
+				<div class="row">
+					<!-- Table Selected Awards-->
+					<div class="col-md-12">
+						<div class="panel panel-default">
+							<div class="panel-heading">Awards</div>
+							<div style="height: 350px; overflow-y: auto;">
+								<table id="awardsSelected" class="table table-hover">
+									<thead>
+										<tr>
+											<th></th>
+											<th>
+											<div class="form-group">
+    											<div class="input-group">
+							      					<div style="cursor: pointer" data-bind="click:findAwardsByBee" class="input-group-addon"><i class="fa fa-filter"></i></div>
+								      					<input placeholder="Title" onkeyup="if(event.keyCode == 13) findAwardsByBee()" type="text"
+														data-bind="value: name_filter_award" name="title" class="form-control input-sm" />
+							   						</div> 
+   											</div>
+											<th></th>
+										</tr>
+									</thead>
+									<!-- Todo: Generate table body -->
+									<tbody data-bind="foreach: awards">
+										<tr>
+											<td><img width="220" height="150"
+												data-bind="attr:{src: avatar_src}" alt="" class="" /></td>
+											<td align="center">
+											<div data-bind="text: title"></div>
+											<div data-bind="text: text"></div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>		
+		</div>
+	</div>

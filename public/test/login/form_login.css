@@ -1,0 +1,28 @@
+/*=====================================
+  FORM
+    ===================================*/
+.donars-section {
+	background: url(../../img/donars.jpg) no-repeat center center;
+	padding: 0;
+	-webkit-background-size: cover;
+	background-size: cover;
+	color: #fff;
+}
+
+.donars-section .overlay {
+	background: url(../../img/overlays/02.png);
+}
+
+.slide-custom {
+	min-height: 200px;
+	padding: 100px 20px 100px 20px;
+	line-height: 30px;
+}
+
+.donars-section h4 {
+	line-height: 40px;
+}
+
+.donars-section h4 i {
+	padding: 5px;
+}

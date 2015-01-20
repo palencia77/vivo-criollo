@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% block body %}
+<div id="divCauseViewModel"></div>
+<div id="googleMapCauses" style="width:100%;height:520px;"></div>
+<script
+src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBoOHqsFEKNW4jFfswtGRdEiJ_SxQ-1nWA&sensor=false">
+</script>
+<script src="{{STATIC_URL}}js/tools/map.js"></script>
+<script src="{{STATIC_URL}}js/models/cause.js"></script>
+<script src="{{STATIC_URL}}js/viewmodels/vmCause.js"></script>
+<script type="text/javascript">
+		// Receives data from the cause view: 
+		{% autoescape off %}
+		var data = {{ data }}
+		{% endautoescape %}
+		showCausesLocations(data);
+</script>
+{% endblock %} 

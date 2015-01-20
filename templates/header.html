@@ -1,0 +1,62 @@
+<nav class="navbar navbar-heybees navbar-fixed-top" role="navigation">
+	<div class="container-fluid">
+	<div class="btn-cajon"></div>
+    	<ul class="nav navbar-nav top-nav">
+			<li><a href="/">Timeline</a></li>
+			<li><a href="/causes">Causas</a></li>
+			<li><a href="/bee/ranking">Ranking</a></li>
+			<li><a href="/awards">Premios</a></li>
+		</ul>
+
+		<div class="pull-right">
+			<ul class="pull-right panel-menu">
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle account" data-toggle="dropdown">
+						<div class="avatar-min-bee">
+							<img id="ImgAvatar" alt="avatar" />
+						</div>
+					</a>
+					<ul class="dropdown-menu">
+						<li>
+							<a id="linkViewProfile" href="#">Editar perfil</a>
+						</li>
+						<li>
+							<a href="javascript:{}" onclick="document.getElementById('logout').submit(); return false;">
+								<form id="logout" class="form-signin" action="/user/logout" method="POST">
+									{% csrf_token %}
+									<i class="glyphicon glyphicon-off"></i>
+									<span>Logout</span>
+								</form>
+							</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+            <div id="divNotificationViewModel" class="pull-right">
+                <ul class="pull-right panel-menu">
+                    <li class="dropdown">
+                        <a href="" class="dropdown-toggle notify" data-toggle="dropdown" data-bind="click: findNotificationsByBee">
+                            <i class="glyphicon glyphicon-bell"> </i>
+                            <span data-bind="css: notification_counter_class"><p data-bind="text: notification_counter"></p></span>
+                        </a>
+                        <ul id="loadingNotifications" style="min-height: 60px" class="dropdown-menu scrollable-menu">
+                            <li data-bind="foreach: notifications">
+                                <a href="" data-bind="click: readNotification">
+                                    <img class="avatar-min-bee" data-bind="attr:{src: owner.avatar_src}" alt="">
+                                    <p data-bind="text: description"></p>
+                                    <small class="time strong" data-bind="timeago: created_date"></small>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+			<div id="search" class="pull-right">
+				<input type="text" placeholder="search"/>
+				<i class="glyphicon glyphicon-search"> </i>
+			</div>
+			
+		</div>
+	</div>
+</nav>

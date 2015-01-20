@@ -1,0 +1,43 @@
+ <div class="container" id="crop-cover">
+    <!-- Cropping modal -->
+    <div class="modal fade" id="cover-modal" aria-hidden="true" aria-labelledby="cover-modal-label" role="dialog" tabindex="-1">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <form class="cover-form" action="crop-avatar.php" enctype="multipart/form-data" method="post">
+            <div class="modal-header">
+              <button class="close" data-dismiss="modal" type="button">&times;</button>
+              <h4 class="modal-title" id="cover-modal-label">Actualizar portada</h4>
+            </div>
+            <div id="updateCover" class="modal-body">
+              <div class="cover-body">
+
+                <!-- Upload image and data -->
+                <div class="cover-upload">
+                  <input class="cover-src" name="cover_src" type="hidden">
+                  <input class="cover-data" name="cover_data" type="hidden">
+                  <label for="coverInput">Local upload</label>
+                  <input class="cover-input" related-img="image-cover-wrapper" id="coverInput" name="cover_file" type="file">
+                </div>
+
+                <!-- Crop and preview -->
+                <div class="row">	      		  
+                  <div class="col-md-9">
+                    <div class="cover-wrapper">
+                    	<img class="cropper2" alt="Picture" id="image-cover-wrapper">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+              <button class="btn btn-primary cover-save" data-bind="click: updateCover" id="btnUpdateCover">Save</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div><!-- /.modal -->
+
+    <!-- Loading state -->
+    <div class="loading" aria-label="Loading" role="img" tabindex="-1"></div>
+  </div>
