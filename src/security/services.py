@@ -16,7 +16,7 @@ from heybeesweb.settings import APP_TYPE, APP_TYPE_S
 def service_user_resgister(login, password, full_name, email):
     url = URL_SERVICES + "/user/register"
     json_data = {
-                 'login': login,
+                'login': login,
                 'password': password,
                 'email': email,
                 'full_name': full_name,
